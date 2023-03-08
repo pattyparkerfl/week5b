@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Middle School Choice</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!--link for style sheet-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!--script to display school info-->
+	<script type = "text/javascript">
+         
+		/*document.write liberty ms info; */
+		function liberty() {
+        	document.getElementById("Output").innerHTML = "Liberty Middle School's mission is to provide a positive, safe, healthy, nurturing and respectful environment in which all students have the opportunity to become productive members of society. We believe academic and behavioral student success can be achieved by using a proactive approach for creating and maintaining a safe and healthy learning environment. LMS is a community school partnering with parents and local businesses to develop curriculum that best fits the needs of our students and our community";
+         document.getElementById('schoolpic').src="images/school2.jpg";
+		}
+		
+		/*document.write TCMS info; */
+		 function tcms() {
+         	document.getElementById("Output").innerHTML = "TCMS is committed to preparing young people for a lifetime of discovery and learning. The World School program, with best in class curriculum, is a unique program for a limited number of qualified students. It is designed to socially and intellectually prepare students for high school and college. A rigorous educational program promotes academic excellence and teaches students to think and learn both independently and cooperatively. The curriculum is demanding, but flexible enough to accommodate individual learning styles and interests. Offering a small liberal-arts college atmosphere, students are respected as important participants by the faculty as they research issues, debate ideas, and present their work.";
+			 document.getElementById('schoolpic').src="images/school3.webp";
+         }
+		 
+		/*document.write stem ms info; */
+		function stem() {         
+            document.getElementById("Output").innerHTML = "STEM Middle School is the only STEM middle school in our district, and the first middle school in the country to partner with Discovery Education. The school has two Project Lead the Way (PLTW) instructors offering STEM classes in Design & Modeling, Automation & Robotics, Flight & Space, and Medical Detectives. Discovery Intermediate also launched a Navy Junior Reserve Officers Training Corps (Navy JROTC) Program this school year. ";
+			document.getElementById('schoolpic').src="images/school1.jpg";
+         }
+		function submit() {
+        	document.getElementById("Output").innerHTML = "school";
+		}
+	</script>      
+</head>
+
+<body>
+	<!--this is the top banner...logo and navigation-->
+	<div class="topnav">
+		<img src="images/banner2.jpg">
+  	</div>
+	
+	<!-- buttons to display school information-->
+	<div class="container-left">
+		<p>Choose a school to view information about that school</p>      
+      		<form name = "schoolButton">
+				<input type = "button" onclick = "liberty()" value = "Liberty Middle School">
+		 		<input type = "button" onclick = "tcms()" value = "TCMS">
+		  		<input type = "button" onclick = "stem()" value = "STEM MS">
+			</form>
+		 <p id = "Output">  </p><br>
+		<img  id="schoolpic" 
+                     src="images/girl.jpg">
+	</div>
+	
+	<!--form to get on wait list-->
+	<div class="container-right">
+		<h3>Complete this form to get on the waiting list of the school of your choice</h3>
+			<form action="/action_page.php">
+			
+				<!--input - text- first name-->
+				<label for="fname">First name:</label><br>
+  				<input type="text" id="fname" name="fname"><br><br>
+ 
+				<!--input - text- last name-->
+				<label for="lname">Last name:</label><br>
+  				<input type="text" id="lname" name="lname"><br><br>
+	
+				<!--input - text -age-->
+				<label for="age">Age:</label><br>
+  				<input type="text" id="age" name="age"><br><br>
+	
+				<!--input - radio button - gender-->
+				<p>Gender</p>
+				<input type="radio" id="male" name="gender" value="male">
+  				<label for="male">male</label>
+  				<input type="radio" id="female" name="gender" value="female">
+  				<label for="female">female</label><br><br>
+	
+				<!--input - drop down - grade--><br>
+ 				<label for="grade">Grade level student is entering:</label>
+				<select id="grade" name="grade">
+  					<option value="sixth">6th</option>
+  					<option value="seventh">7th</option>
+  					<option value="eighth">8th</option>
+  				</select> <br><br>
+	
+				<!--input - drop down - schools--><br>
+ 				<label for="grade">Choose a school to get on waiting list</label>
+				<select id="school" name="school">
+  					<option value="liberty">Liberty Middle School</option>
+  					<option value="tcms">TCMS</option>
+  					<option value="stem">STEM MS</option>
+  				</select> <br><br>
+				
+				<label for="email">Enter your email:</label>
+  				<input type="email" id="email" name="email"> <br><br>
+			
+				
+				<input type = "button" onclick = "school()" value = "submit">
+			</form>
+	</div>
+	
+	<div class="footer">
+		<p> Paradise County School District</p>
+  	</div>
+	
+	
+</body>
+</html>
